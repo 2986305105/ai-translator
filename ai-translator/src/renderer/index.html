@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本地AI翻译工具</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌐 本地AI翻译工具</h1>
+      <p class="subtitle">支持 50+ 语言互译，数据完全本地化</p>
+      <div class="status" id="status">检查连接中...</div>
+    </header>
+
+    <div class="main-content">
+      <!-- 单句翻译 -->
+      <div class="panel">
+        <h2>📝 单句翻译</h2>
+        <div class="lang-selector">
+          <select id="fromLang">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+            <option value="ru">Русский</option>
+            <option value="ar">العربية</option>
+            <option value="pt">Português</option>
+          </select>
+          <button id="swapBtn" class="swap-btn">⇄</button>
+          <select id="toLang">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+            <option value="ru">Русский</option>
+            <option value="ar">العربية</option>
+            <option value="pt">Português</option>
+          </select>
+        </div>
+        
+        <div class="translation-area">
+          <textarea 
+            id="sourceText" 
+            placeholder="输入要翻译的文本..."
+            rows="8"
+          ></textarea>
+          <div class="action-buttons">
+            <button id="translateBtn" class="btn btn-primary">翻译</button>
+            <button id="clearBtn" class="btn btn-secondary">清空</button>
+          </div>
+          <textarea 
+            id="targetText" 
+            placeholder="翻译结果将显示在这里..."
+            rows="8"
+            readonly
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- 批量翻译 -->
+      <div class="panel">
+        <h2>📄 批量翻译</h2>
+        <div class="batch-area">
+          <textarea 
+            id="batchSource" 
+            placeholder="每行一个句子，支持批量翻译..."
+            rows="10"
+          ></textarea>
+          <button id="batchTranslateBtn" class="btn btn-primary">批量翻译</button>
+          <textarea 
+            id="batchTarget" 
+            placeholder="批量翻译结果..."
+            rows="10"
+            readonly
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

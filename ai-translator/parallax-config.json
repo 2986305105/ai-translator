@@ -1,0 +1,9 @@
+{
+  "model": "deepseek-r1:latest",
+  "api_endpoint": "http://localhost:11434",
+  "timeout": 120,
+  "max_tokens": 2000,
+  "temperature": 0.3,
+  "description": "本地AI翻译工具配置"
+}
+

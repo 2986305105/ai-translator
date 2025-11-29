@@ -1,0 +1,47 @@
+{
+  "name": "ai-translator",
+  "version": "1.0.0",
+  "description": "本地AI翻译工具 - 基于 Parallax",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux"
+  },
+  "keywords": ["translator", "ai", "parallax", "local"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^27.1.0",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.aitranslator.app",
+    "productName": "AI翻译工具",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "parallax-config.json"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": ["dmg", "zip"]
+    },
+    "win": {
+      "target": ["nsis", "portable"]
+    },
+    "linux": {
+      "target": ["AppImage", "deb"]
+    }
+  }
+}
+
